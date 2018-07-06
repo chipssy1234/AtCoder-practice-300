@@ -1,0 +1,12 @@
+import numpy as np
+N = int(input())
+S = [input()[0] for _ in range(N)]
+print(S)
+npS = np.array(S)
+march = np.zeros(5,dtype = int)
+tmp = 'MARCH'
+
+for i in range(5):
+    march[i] = np.sum(npS == tmp[i])
+
+print(march)
